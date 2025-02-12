@@ -1,6 +1,13 @@
-# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# [ICLR2025] Advancing Out-of-Distribution Detection via Local Neuroplasticity
 
-This repository contains the code accompanying our paper, "Advancing Out-of-Distribution Detection via Local Neuroplasticity".
+This is the official implementation of the ICLR'25 paper:
+
+Advancing Out-of-Distribution Detection via Local Neuroplasticity
+Alessandro Canevaro, Julian Schmidt, Mohammad Sajad Marvi, Hang Yu, Georg Martius, Julian Jordan
+
+# Abstract
+In the domain of machine learning, the assumption that training and test data share the same distribution is often violated in real-world scenarios, requiring effective out-of-distribution (OOD) detection. This paper presents a novel OOD detection method that leverages the unique local neuroplasticity property of Kolmogorov-Arnold Networks (KANs). Unlike traditional multilayer perceptrons, KANs exhibit local plasticity, allowing them to preserve learned information while adapting to new tasks. Our method compares the activation patterns of a trained KAN against its untrained counterpart to detect OOD samples. We validate our approach on benchmarks from image and medical domains, demonstrating superior performance and robustness compared to state-of-the-art techniques. These results underscore the potential of KANs in enhancing the reliability of machine learning systems in diverse environments.
+
 
 ## Installation
 
@@ -62,7 +69,9 @@ python ./tabmed/main_tabmed_kan.py --in_distribution eicu --train_model 1 --arch
 
 Use the `--ood_type` parameter along with other parameters to configure the benchmark.
 
-### Third-Party Projects
+## License
+
+This code is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 This project uses the following third-party projects:
 
@@ -70,3 +79,16 @@ This project uses the following third-party projects:
 - [TabMed Benchmarks](https://github.com/mazizmalayeri/TabMedOOD/tree/main?tab=readme-ov-file) - MIT License
 - [pykan](https://github.com/KindXiaoming/pykan/tree/master) - MIT License
 - [efficient-kan](https://github.com/Blealtan/efficient-kan/tree/master) - MIT License
+
+## Citation
+
+If you find that our paper is helpful for your research, please give us a star and cite it by:
+
+@inproceedings{
+canevaro2025advancing,
+title={Advancing Out-of-Distribution Detection via Local Neuroplasticity},
+author={Alessandro Canevaro and Julian Schmidt and Mohammad Sajad Marvi and Hang Yu and Georg Martius and Julian Jordan},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=1F8xTfv6ah}
+}

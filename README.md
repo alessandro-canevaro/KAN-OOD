@@ -2,8 +2,8 @@
 
 This is the official implementation of the ICLR'25 paper:
 
-Advancing Out-of-Distribution Detection via Local Neuroplasticity
-Alessandro Canevaro, Julian Schmidt, Mohammad Sajad Marvi, Hang Yu, Georg Martius, Julian Jordan
+> Advancing Out-of-Distribution Detection via Local Neuroplasticity
+> Alessandro Canevaro, Julian Schmidt, Mohammad Sajad Marvi, Hang Yu, Georg Martius, Julian Jordan
 
 # Abstract
 In the domain of machine learning, the assumption that training and test data share the same distribution is often violated in real-world scenarios, requiring effective out-of-distribution (OOD) detection. This paper presents a novel OOD detection method that leverages the unique local neuroplasticity property of Kolmogorov-Arnold Networks (KANs). Unlike traditional multilayer perceptrons, KANs exhibit local plasticity, allowing them to preserve learned information while adapting to new tasks. Our method compares the activation patterns of a trained KAN against its untrained counterpart to detect OOD samples. We validate our approach on benchmarks from image and medical domains, demonstrating superior performance and robustness compared to state-of-the-art techniques. These results underscore the potential of KANs in enhancing the reliability of machine learning systems in diverse environments.
@@ -84,7 +84,7 @@ This project uses the following third-party projects:
 
 If you find that our paper is helpful for your research, please give us a star and cite it by:
 
-```sh
+```
 @inproceedings{
 canevaro2025advancing,
 title={Advancing Out-of-Distribution Detection via Local Neuroplasticity},

@@ -2,7 +2,7 @@
 
 This is the official implementation of the ICLR'25 paper:
 
-> Advancing Out-of-Distribution Detection via Local Neuroplasticity
+> **Advancing Out-of-Distribution Detection via Local Neuroplasticity**
 > Alessandro Canevaro, Julian Schmidt, Mohammad Sajad Marvi, Hang Yu, Georg Martius, Julian Jordan
 
 # Abstract

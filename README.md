@@ -84,6 +84,7 @@ This project uses the following third-party projects:
 
 If you find that our paper is helpful for your research, please give us a star and cite it by:
 
+```sh
 @inproceedings{
 canevaro2025advancing,
 title={Advancing Out-of-Distribution Detection via Local Neuroplasticity},
@@ -92,3 +93,5 @@ booktitle={The Thirteenth International Conference on Learning Representations},
 year={2025},
 url={https://openreview.net/forum?id=1F8xTfv6ah}
 }
+```
+```sh

@@ -134,13 +134,18 @@ class KANPostprocessor(BasePostprocessor):
             # sanity check on train acc
             train_acc = all_preds.eq(all_labels).float().mean()
             print(f' Train acc: {train_acc:.2%}')
+
+            #all_feats = all_feats.view(all_feats.shape[0], all_feats.shape[1]//4, 4)
+            #all_feats = all_feats.mean(dim=2)
           
             try:
-                all_labels = all_labels // int((torch.max(all_labels).item() + 1)/self.pc["num_classes"])
+                all_labels_reduced = all_labels // int((torch.max(all_labels).item() + 1)/self.pc["num_classes"])
             except RuntimeError:
                 print("ZeroDivisionError")
 
-            self.kan_postprocessor.kan_setup(all_feats, all_labels)
+        
+
+            self.kan_postprocessor.kan_setup(all_feats, all_labels_reduced, all_labels)
             
             self.setup_flag = True
 
@@ -155,6 +160,9 @@ class KANPostprocessor(BasePostprocessor):
     def postprocess(self, net: nn.Module, data: Any):
         logits, features_list = net(data, return_feature_list=True)
         features = torch.concatenate([layer.mean(dim=(2, 3)) for layer in features_list[self.pc["aggregate_layers"]:]], dim=1)
+
+        #features = features.view(features.shape[0], features.shape[1]//4, 4)
+        #features = features.mean(dim=2)
 
         pred = logits.argmax(1)
         

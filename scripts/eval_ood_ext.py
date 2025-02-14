@@ -55,6 +55,8 @@ def add_overall_avg(df):
 
     # Update selected_datasets based on the detected CIFAR dataset
     selected_datasets = [cifar_key, "tin", "mnist", "svhn", "texture", "places365"]
+    if args.id_data == "imagenet200":
+        selected_datasets = ["ssb_hard", "ninco", "inaturalist", "textures", "openimage_o"]
 
     def compute_overall_mean_std(column):
         means = np.array([val[0] for val in column])

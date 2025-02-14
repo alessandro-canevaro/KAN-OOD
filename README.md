@@ -56,7 +56,7 @@ python ./scripts/eval_ood_ext.py --id-data cifar10 --root ./results/cifar10_resn
 ```
 
 ### Notes:
-- All dataset can be run with 'eval_ood_ext.py' except ImageNet1K wich requires 'eval_ood_imagenet.py'
+- All dataset can be run with `eval_ood_ext.py` except ImageNet-1K wich requires `eval_ood_imagenet.py`
 
 ### Configuration
 

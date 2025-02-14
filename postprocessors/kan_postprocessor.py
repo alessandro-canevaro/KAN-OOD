@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from OpenOOD (https://github.com/Jingkang50/OpenOOD)
+# Copyright (c) 2021 Jingkang Yang. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 from copy import deepcopy
 from typing import Any
 from sklearn.decomposition import PCA

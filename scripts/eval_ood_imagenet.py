@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from OpenOOD (https://github.com/Jingkang50/OpenOOD)
+# Copyright (c) 2021 Jingkang Yang. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 import collections
 import os, sys
 ROOT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')

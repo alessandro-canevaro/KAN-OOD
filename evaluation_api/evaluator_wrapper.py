@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from OpenOOD (https://github.com/Jingkang50/OpenOOD)
+# Copyright (c) 2021 Jingkang Yang. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 from typing import Callable, List, Type, Any
 import numpy as np
 from openood.evaluators.metrics import compute_all_metrics

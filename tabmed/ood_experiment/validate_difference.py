@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from TabMedOOD (https://github.com/mazizmalayeri/TabMedOOD/)
+# Copyright (c) 2023 Mohammad Azizmalayeri. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 import numpy as np
 from typing import Tuple, List, Optional, Callable
 from scipy.stats import ks_2samp, ttest_ind, shapiro

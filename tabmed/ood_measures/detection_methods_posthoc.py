@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from TabMedOOD (https://github.com/mazizmalayeri/TabMedOOD/)
+# Copyright (c) 2023 Mohammad Azizmalayeri. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 """
 All the post-hoc detectors are defined separately in this file, and function 'detection_method' calls each of them based on their name. 
 The density-based models are similarly called in this function.

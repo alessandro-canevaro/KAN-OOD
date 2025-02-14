@@ -1,3 +1,11 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from TabMedOOD (https://github.com/mazizmalayeri/TabMedOOD/)
+# Copyright (c) 2023 Mohammad Azizmalayeri. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 import torch
 from models.predictive_models import apply_model
 from sklearn.metrics import roc_auc_score, accuracy_score, f1_score

@@ -1,3 +1,14 @@
+# ------------------------------------------------------------------------
+# Advancing Out-of-Distribution Detection via Local Neuroplasticity
+# Copyright (c) 2024 Alessandro Canevaro. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from pykan (https://github.com/KindXiaoming/pykan/tree/master)
+# Copyright (c) 2024 Ziming Liu. All Rights Reserved.
+# ------------------------------------------------------------------------
+# Modified from efficient-kan (https://github.com/Blealtan/efficient-kan/tree/master)
+# Copyright (c) 2024 Huanqi Cao. All Rights Reserved.
+# ------------------------------------------------------------------------
+
 import torch
 import torch.nn.functional as F
 import math

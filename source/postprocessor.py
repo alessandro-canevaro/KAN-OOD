@@ -64,10 +64,12 @@ class KANBasePostprocessor():
 
     
     def kan_setup(self, all_feats, all_labels):
+    #def kan_setup(self, all_feats, all_labels_reduced, all_labels):
         print("Data prep")
         torch.autograd.set_detect_anomaly(True)
         all_feats = all_feats.to(self.pc["device"])
         all_labels = all_labels.to(self.pc["device"])
+        #all_labels_reduced = all_labels_reduced.to(self.pc["device"])
         print("dataset shape", all_feats.shape)
 
         if self.pc["norm"]:
@@ -95,6 +97,20 @@ class KANBasePostprocessor():
             num_samples = all_feats.shape[0] // len(self.kan_models)
             partitioned_data = [(all_feats[i * num_samples:(i + 1) * num_samples, :], 
                                all_labels[i * num_samples:(i + 1) * num_samples]) for i in range(len(self.kan_models))]
+            # try:
+            #     all_labels = all_labels // int((torch.max(all_labels).item() + 1)/self.pc["num_partitions"])
+            # except RuntimeError:
+            #     print("ZeroDivisionError")
+
+            # unique_labels = np.unique(all_labels.cpu().detach().numpy())
+            # partitioned_data = []
+            # for label in unique_labels:
+            #     # Get the indices of samples with the current label
+            #     indices = np.where(all_labels.cpu().detach().numpy() == label)[0]
+            #     # Partition all_feats and all_labels based on these indices
+            #     feats_partition = all_feats[indices, :]
+            #     labels_partition = all_labels_reduced[indices]
+            #     partitioned_data.append((feats_partition, labels_partition))
         elif self.pc["mode"] == 1:# pca+kmeans
             # Step 1: Apply PCA to the dataset
             pca = PCA(n_components=self.pc["pca_comp"])

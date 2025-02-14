@@ -55,6 +55,9 @@ To run the KAN postprocessor, use:
 python ./scripts/eval_ood_ext.py --id-data cifar10 --root ./results/cifar10_resnet18_32x32_base_e100_lr0.1_default --postprocessor kan
 ```
 
+### Notes:
+- All dataset can be run with 'eval_ood_ext.py' except ImageNet1K wich requires 'eval_ood_imagenet.py'
+
 ### Configuration
 
 Parameters can be set in the `kan.yml` config file.

@@ -139,13 +139,15 @@ class KANPostprocessor(BasePostprocessor):
             #all_feats = all_feats.mean(dim=2)
           
             try:
-                all_labels_reduced = all_labels // int((torch.max(all_labels).item() + 1)/self.pc["num_classes"])
+                all_labels = all_labels // int((torch.max(all_labels).item() + 1)/self.pc["num_classes"])
+                #all_labels_reduced = all_labels // int((torch.max(all_labels).item() + 1)/self.pc["num_classes"])
             except RuntimeError:
                 print("ZeroDivisionError")
 
         
 
-            self.kan_postprocessor.kan_setup(all_feats, all_labels_reduced, all_labels)
+            self.kan_postprocessor.kan_setup(all_feats, all_labels)
+            #self.kan_postprocessor.kan_setup(all_feats, all_labels_reduced, all_labels)
             
             self.setup_flag = True
 

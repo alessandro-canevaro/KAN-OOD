@@ -63,12 +63,13 @@ class KANBasePostprocessor():
         return normalized_data
 
     
-    def kan_setup(self, all_feats, all_labels_reduced, all_labels):
+    def kan_setup(self, all_feats, all_labels):
+    #def kan_setup(self, all_feats, all_labels_reduced, all_labels):
         print("Data prep")
         torch.autograd.set_detect_anomaly(True)
         all_feats = all_feats.to(self.pc["device"])
         all_labels = all_labels.to(self.pc["device"])
-        all_labels_reduced = all_labels_reduced.to(self.pc["device"])
+        #all_labels_reduced = all_labels_reduced.to(self.pc["device"])
         print("dataset shape", all_feats.shape)
 
         if self.pc["norm"]:
